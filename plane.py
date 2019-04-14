@@ -1,3 +1,4 @@
+
 # coding:utf-8
 import sys
 
@@ -31,19 +32,15 @@ def handleEvent():
             pygame.quit()
             sys.exit()
 
-y=0
 while True:
     # 下方写你的代码
+    坐标=pygame.mouse.get_pos()
     canvas.blit(bg,(0,0))
     #e1=canvas.blit(enemy,(200,200))
     #e2=canvas.blit(enemy,(250,250))
-    e3=canvas.blit(enemy,(300,y))
+    e3=canvas.blit(enemy,坐标)
     #e4=canvas.blit(enemy,(350,250))
     #e5=canvas.blit(enemy,(400,200))
-    pygame.display.update()
-    y+=1
-    if y>650:
-        y=0
     # 更新屏幕内容
     pygame.display.update()
     # 处理关闭游戏
